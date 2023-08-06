@@ -235,4 +235,20 @@
 
    **[⬆ Back to Top](#table-of-contents)**
 
+10. ### Implementation of Queue data structure in Javascript
+
+   In This article, we would be implementing Queue data structure in javascript. A Queue works on the FIFO(First in First Out) principle. Hence, it performs two basic operations which are the addition of elements at the end of the queue and the removal of elements from the front of the queue. Like Stack, Queue is also a linear data structure. 
+
+   Note: Assuming a queue can grow dynamically we are not considering the overflow condition Now let’s see an example of a queue class using an array:- 
+
+   To implement a queue data structure we need the following methods:
+
+   enqueue : To add elements at end of the queue.
+   dequeue: To remove an element from the front of the queue.
+   peek: To get the front element without removing it.
+   isEmpty: To check whether an element is present in the queue or not.
+   printQueue: To print the elements present in queue.
+
+   **[⬆ Back to Top](#table-of-contents)**
+
 
