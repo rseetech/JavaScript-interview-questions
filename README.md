@@ -37,6 +37,23 @@
 | 6  | [How to Stop Event bubbling ](#how-to-stop-event-bubbling)     |
 | 7  | [Event Capturing ](#event-capturing)     |
 
+1. ### Differences between var, let, and const:
+
+var	let	const
+The scope of a var variable is functional scope.	The scope of a let variable is block scope.	The scope of a const variable is block scope.
+
+It can be updated and re-declared into the scope.	It can be updated but cannot be re-declared into the scope.	It cannot be updated or re-declared into the scope.
+
+It can be declared without initialization.	It can be declared without initialization.	It cannot be declared without initialization.
+
+It can be accessed without initialization as its default value is “undefined”.	It cannot be accessed without initialization otherwise it will give ‘referenceError’.	It cannot be accessed without initialization, as it cannot be declared without initialization.
+
+hoisting done, with initializing as ‘default’ value	Hoisting is done, but not initialized (this is the reason for the error when we access the let variable before declaration/initialization	Hoisting is done, but not initialized (this is the reason for the error when we access the const variable before declaration/initialization
+
+   | var                                     | let                           |  const    |
+   | ------------------------------ | ------------------------------- |---------------------------|
+   | The scope of a var variable is functional scope.| The scope of a let variable is block scope.  | The scope of a const variable is block scope. |
+
 
 1. ### What is a promise
    A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). 
@@ -92,6 +109,36 @@
       .then(result) => {   console.log(result) }
       .catch(error => console.log(`Error in promises ${error}`))
 
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+4. ### Async/await
+
+   There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It’s surprisingly easy to understand and use.
+
+   await
+   The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module.
+
+   function resolveAfter2Seconds(x) {
+   return new Promise((resolve) => {
+      setTimeout(() => {
+         resolve(x);
+      }, 2000);
+   });
+   }
+
+   async function f1() {
+   const x = await resolveAfter2Seconds(10);
+   console.log(x); // 10
+   }
+
+   f1();
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+5. ### What is an event loop in JavaScript ?
+
+   Event loop: An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -211,30 +258,6 @@
    ```
    **[⬆ Back to Top](#table-of-contents)**
 
-9. ### Async/await
-
-   There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It’s surprisingly easy to understand and use.
-
-   await
-   The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module.
-
-   function resolveAfter2Seconds(x) {
-   return new Promise((resolve) => {
-      setTimeout(() => {
-         resolve(x);
-      }, 2000);
-   });
-   }
-
-   async function f1() {
-   const x = await resolveAfter2Seconds(10);
-   console.log(x); // 10
-   }
-
-   f1();
-
-   **[⬆ Back to Top](#table-of-contents)**
-
 10. ### Implementation of Queue data structure in Javascript
 
    In This article, we would be implementing Queue data structure in javascript. A Queue works on the FIFO(First in First Out) principle. Hence, it performs two basic operations which are the addition of elements at the end of the queue and the removal of elements from the front of the queue. Like Stack, Queue is also a linear data structure. 
@@ -249,6 +272,15 @@
    isEmpty: To check whether an element is present in the queue or not.
    printQueue: To print the elements present in queue.
 
+   **[⬆ Back to Top](#table-of-contents)**
+
+11. ### What is Array Destructuring in JavaScript?
+   Destructuring the array in JavaScript simply means extracting multiple values from data stored in objects and arrays. The destructing assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. We can extract a value from an array and put them into other variables. Array destructuring javascript is also used to assign and declare a variable. For destructing an array, we use the index value of that particular array.
+
+   #### What is Destructuring?
+
+   In general, destroying means to destroy or to reduce something to its small portions. By saying array destructuring javascript, we do not mean to destroy the array, but it means to break the array into simple fragments which can be used to assign a new variable. These fragments can be easily accessed and can be referenced by the variables. The destructuring of the array totally depends upon the coder and how much he wants to destroy or destruct the given array.
+      
    **[⬆ Back to Top](#table-of-contents)**
 
 11. ### Function Overloading in JavaScript
