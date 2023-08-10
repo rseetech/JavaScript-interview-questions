@@ -276,8 +276,49 @@
       
    **[⬆ Back to Top](#table-of-contents)**
 
-11. ### Function Overloading in JavaScript
+11. ### Difference between Debouncing and Throttling:
 
+   Below are the main differences between Debouncing and Throttling
+
+   | Debouncing                                                        | Throttling                                                 |
+   | ------------------------------------------------------------------| ------------------------------------------------------------------- |
+   | Debouncing waits for a certain time before invoking the function again. | Throttling limits the number of times the function can be called over a certain period. |
+   | Ensures that the function is called only once, even if the event is triggered multiple times.  | Ensures that the function is called at a regular interval, even if the event is triggered multiple times.  |
+   | Useful when you want to delay the invocation of a function until a certain period of inactivity has passed.  | Useful when you want to delay the invocation of a function until a certain period of inactivity has passed.    |
+   | Eg. You can debounce an async API request function that is called every time the user types in an input field. | Eg. You can throttle a slide change Function that is called every time the user clicks a button in a carousel.  |
+
+11. ### Difference Between Method Overloading and Method Overriding in Javascript
+
+   #### JavaScript does not support overloading.
+
+   JavaScript supports overriding, so if you define two functions with the same name, the last one defined will override the previously defined version and every time a call will be made to the function, the last defined one will get executed.
+
+   #### Example of overriding functions in JavaScript
+
+   ```
+      function addNumbers(n1, n2, n3) {
+         return n1 + n2 + n3;
+      }
+      function addNumbers(n1, n2) {
+         return n1 + n2;
+      }
+      var sum = addNumbers(1, 2, 3);  
+      console.log(sum); // 3 because 
+   ```
+
+   **[⬆ Back to Top](#table-of-contents)**
+
+12. ### Differences between Arrow and Regular function
+
+   There are certain differences between Arrow and Regular function, i.e
+
+   1. Syntaxs
+   2. No arguments (arguments are array-like objects)
+   3. No prototype object for the Arrow function
+   4. Cannot be invoked with a new keyword (Not a constructor function)
+   5. No own this (call, apply & bind won't work as expected)
+   6. It cannot be used as a Generator function
+   7. Duplicate-named parameters are not allowed
 
    **[⬆ Back to Top](#table-of-contents)**
 
