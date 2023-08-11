@@ -47,6 +47,55 @@
    | It can be accessed without initialization as its default value is “undefined”.| It cannot be accessed without initialization otherwise it will give ‘referenceError’.  | It cannot be accessed without initialization, as it cannot be declared without initialization. |
    | hoisting done, with initializing as ‘default’ value| Hoisting is done, but not initialized (this is the reason for the error when we access the let variable before declaration/initialization  | Hoisting is done, but not initialized (this is the reason for the error when we access the const variable before declaration/initialization |
 
+2. ### Features of ES6
+
+   Features of ES6
+
+   1. let and const Keywords
+   2. Arrow Functions
+   3. Multi-line Strings
+   4. Default Parameters
+   5. Template Literals
+   6. Destructuring Assignment
+   7. Enhanced Object Literals
+   8. Promises
+   9. Classes
+   10. Modules
+   11 Spread / Rest Operator
+
+3. ### What is the rest parameter and spread operator in JavaScript ?
+
+   In Javascript, both the spread operator and rest parameter have the same syntax which is three dots(…). Even though they have the same syntax they differ in functions.
+
+   **Spread operator:** The spread operator helps us expand an iterable such as an array where multiple arguments are needed, it also helps to expand the object expressions. In cases where we require all the elements of an iterable or object to help us achieve a task, we use a spread operator.
+
+   Note: There can be more than one spread operator in javascript functions.
+
+   ```
+      var array1 = [10, 20, 30, 40, 50];
+      var array2 = [60, 70, 80, 90, 100];
+      var array3 = [...array1, ...array2];
+      console.log(array3);
+   
+   ```
+
+   **Rest operator:** The rest parameter is converse to the spread operator. while the spread operator expands elements of an iterable, the rest operator compresses them. It collects several elements. In functions when we require to pass arguments but were not sure how many we have to pass, the rest parameter makes it easier. 
+
+   Note: There must be only one rest operator in javascript functions.
+
+   ```
+      function average(...args) {
+         console.log(args);
+         var avg =
+               args.reduce(function (a, b) {
+                  return a + b;
+            }, 0) / args.length;
+         return avg;
+      }
+      console.log("average of numbers is : " + average(1, 2, 3, 4, 5));
+      console.log("average of numbers is : " + average(1, 2, 3));
+      
+   ```
 
 1. ### What is a promise
    A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). 
@@ -312,7 +361,7 @@
 
    There are certain differences between Arrow and Regular function, i.e
 
-   1. Syntaxs
+   1. Syntax
    2. No arguments (arguments are array-like objects)
    3. No prototype object for the Arrow function
    4. Cannot be invoked with a new keyword (Not a constructor function)
