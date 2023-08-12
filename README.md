@@ -47,6 +47,8 @@
    | It can be accessed without initialization as its default value is “undefined”.| It cannot be accessed without initialization otherwise it will give ‘referenceError’.  | It cannot be accessed without initialization, as it cannot be declared without initialization. |
    | hoisting done, with initializing as ‘default’ value        | Hoisting is done, but not initialized (this is the reason for the error when we access the let variable before declaration/initialization  | Hoisting is done, but not initialized (this is the reason for the error when we access the const variable before declaration/initialization |
 
+    **[⬆ Back to Top](#table-of-contents)**
+    
 2. ### ### What are the Differences between TypeScript and JavaScript?
 
     | TypeScript	                            | JavaScript                        |
@@ -56,6 +58,7 @@
     | TypeScript gives support for modules      | JavaScript does not support modules     |
     | It supports optional parameter function   | It does not support optional parameter function  |
 
+    **[⬆ Back to Top](#table-of-contents)**
     
 2. ### Features of ES6
 
@@ -73,6 +76,8 @@
    10. Modules
    11. Spread / Rest Operator
 
+   **[⬆ Back to Top](#table-of-contents)**
+    
 3. ### What is the rest parameter and spread operator in JavaScript ?
 
    In Javascript, both the spread operator and rest parameter have the same syntax which is three dots(…). Even though they have the same syntax they differ in functions.
@@ -105,6 +110,8 @@
       console.log("average of numbers is : " + average(1, 2, 3));
    ```
 
+   **[⬆ Back to Top](#table-of-contents)**
+    
 1. ### What is a promise
    A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). 
    
@@ -343,6 +350,8 @@
    | Useful when you want to delay the invocation of a function until a certain period of inactivity has passed.  | Useful when you want to delay the invocation of a function until a certain period of inactivity has passed.    |
    | Eg. You can debounce an async API request function that is called every time the user types in an input field. | Eg. You can throttle a slide change Function that is called every time the user clicks a button in a carousel.  |
 
+   **[⬆ Back to Top](#table-of-contents)**
+    
 11. ### Difference Between Method Overloading and Method Overriding in Javascript
 
    #### JavaScript does not support overloading.
@@ -377,5 +386,3 @@
    7. Duplicate-named parameters are not allowed
 
    **[⬆ Back to Top](#table-of-contents)**
-
-
