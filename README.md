@@ -39,11 +39,11 @@
 
 1. ### Differences between var, let, and const:
 
-   | var                                                  | let                               |  const    |
-   | --------------------------------------------- | ----------------------------------- |---------------------------|
+   | var                                                  | let                               |  const                    |
+   | --------------------------------------------- | ----------------------------------- |----------------------------------|
    | The scope of a var variable is functional scope.           | The scope of a let variable is block scope.  | The scope of a const variable is block scope. |
    | It can be updated and re-declared into the scope.      | It can be updated but cannot be re-declared into the scope.  | It cannot be updated or re-declared into the scope. |
-   | It can be declared without initialization.| It can be declared without initialization.  | It cannot be declared without initialization. |
+   | It can be declared without initialization.            | It can be declared without initialization.  | It cannot be declared without initialization. |
    | It can be accessed without initialization as its default value is “undefined”.| It cannot be accessed without initialization otherwise it will give ‘referenceError’.  | It cannot be accessed without initialization, as it cannot be declared without initialization. |
    | hoisting done, with initializing as ‘default’ value        | Hoisting is done, but not initialized (this is the reason for the error when we access the let variable before declaration/initialization  | Hoisting is done, but not initialized (this is the reason for the error when we access the const variable before declaration/initialization |
 
@@ -61,7 +61,7 @@
    8. Promises
    9. Classes
    10. Modules
-   11 Spread / Rest Operator
+   11. Spread / Rest Operator
 
 3. ### What is the rest parameter and spread operator in JavaScript ?
 
@@ -76,7 +76,6 @@
       var array2 = [60, 70, 80, 90, 100];
       var array3 = [...array1, ...array2];
       console.log(array3);
-   
    ```
 
    **Rest operator:** The rest parameter is converse to the spread operator. while the spread operator expands elements of an iterable, the rest operator compresses them. It collects several elements. In functions when we require to pass arguments but were not sure how many we have to pass, the rest parameter makes it easier. 
@@ -94,7 +93,6 @@
       }
       console.log("average of numbers is : " + average(1, 2, 3, 4, 5));
       console.log("average of numbers is : " + average(1, 2, 3));
-      
    ```
 
 1. ### What is a promise
@@ -119,7 +117,6 @@
          );
 
          promise.then((value) => console.log(value));
-         
       ```
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -146,11 +143,11 @@
 
    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
    
-
+   ```
    Promise.all([Promise1, Promise2, Promise3]) 
       .then(result) => {   console.log(result) }
       .catch(error => console.log(`Error in promises ${error}`))
-
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
@@ -158,23 +155,23 @@
 
    There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It’s surprisingly easy to understand and use.
 
-   await
+   #### await
    The await operator is used to wait for a Promise and get its fulfillment value. It can only be used inside an async function or at the top level of a module.
 
+   ```
    function resolveAfter2Seconds(x) {
-   return new Promise((resolve) => {
-      setTimeout(() => {
-         resolve(x);
-      }, 2000);
-   });
+      return new Promise((resolve) => {
+         setTimeout(() => {
+            resolve(x);
+         }, 2000);
+      });
    }
-
    async function f1() {
-   const x = await resolveAfter2Seconds(10);
-   console.log(x); // 10
+      const x = await resolveAfter2Seconds(10);
+      console.log(x); // 10
    }
-
    f1();
+   ```
 
    **[⬆ Back to Top](#table-of-contents)**
 
