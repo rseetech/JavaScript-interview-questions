@@ -47,6 +47,16 @@
    | It can be accessed without initialization as its default value is “undefined”.| It cannot be accessed without initialization otherwise it will give ‘referenceError’.  | It cannot be accessed without initialization, as it cannot be declared without initialization. |
    | hoisting done, with initializing as ‘default’ value        | Hoisting is done, but not initialized (this is the reason for the error when we access the let variable before declaration/initialization  | Hoisting is done, but not initialized (this is the reason for the error when we access the const variable before declaration/initialization |
 
+2. ### ### What are the Differences between TypeScript and JavaScript?
+
+    | TypeScript	                            | JavaScript                        |
+    | ----------------------------------------- | ------------------------------------------- |
+    | TypeScript is an Object-Oriented language | JavaScript is a Scripting language       |
+    | It has a feature known as Static typing   | It does not have static typing            |
+    | TypeScript gives support for modules      | JavaScript does not support modules     |
+    | It supports optional parameter function   | It does not support optional parameter function  |
+
+    
 2. ### Features of ES6
 
    Features of ES6
