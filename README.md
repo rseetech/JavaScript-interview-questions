@@ -386,3 +386,25 @@
    7. Duplicate-named parameters are not allowed
 
    **[⬆ Back to Top](#table-of-contents)**
+
+13. ### Shallow Copy and Deep Copy in JavaScript
+
+
+   There are two ways to clone an object in Javascript:
+
+   **Shallow copy:** means that only the first level of the object is copied. Deeper levels are referenced. A **shallow copy** is a copy that only goes one level deep. In other words, it copies the object and all its properties, but any nested objects or arrays will still reference the same memory location as the original object.
+
+   **Deep copy:** means that all levels of the object are copied. This is a true copy of the object. A **deep copy** is a copy that creates a new object with new memory locations for all of its properties and nested objects or arrays. It means that if you make changes to the copied object or any of its nested objects or arrays, it will not affect the original object.
+
+   ```
+   let obj = {name: "Ramesh", profession: {des: "lead", location: "somewhere"}};
+
+   const shallowcopy = {...obj};
+   console.log(shallowcopy);
+
+   const deepcopy = JSON.parse(JSON.stringify(obj));
+   console.log(deepcopy);
+
+   ```
+   
+   **[⬆ Back to Top](#table-of-contents)**
